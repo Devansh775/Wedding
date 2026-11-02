@@ -1,8 +1,8 @@
 export const wedding = {
-  bride: 'Aanya',
-  groom: 'Kabir',
-  initials: 'A & K',
-  date: 'Your wedding date',
+  bride: 'Ronak',
+  groom: 'Ami',
+  initials: 'R & K',
+  date: '26/11/2026',
   dateShort: 'A day to remember',
   familyMessage: 'With the blessings of our families, we invite you to celebrate a new beginning.',
   story: 'Somewhere between shared laughter and quiet promises, our paths became one. We are grateful to the family and friends who have made every chapter brighter, and we cannot wait to begin this next one surrounded by you.',

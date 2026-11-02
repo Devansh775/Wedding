@@ -27,7 +27,7 @@ export default function Lightbox({ photos, index, onClose, onChange }) {
       <figure className="lightbox-figure" onClick={(event) => event.stopPropagation()}>
         <img src={photo.src} alt={photo.title} />
         <figcaption><span><strong>{photo.title}</strong><small>{photo.category} · {index + 1} of {photos.length}</small></span>
-          <a className="lightbox-download" href={photo.src} download={`${photo.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.${photo.src.split('.').pop()?.split('?')[0] || 'jpg'}`}><Download size={17} /> Download</a>
+          <a className="lightbox-download" href={photo.src} download={photo.filename || `${photo.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.${photo.src.split('.').pop()?.split('?')[0] || 'jpg'}`}><Download size={17} /> Download</a>
         </figcaption>
       </figure>
       <button className="lightbox-arrow next icon-button" aria-label="Next photo" onClick={(event) => { event.stopPropagation(); onChange((index + 1) % photos.length); }}><ArrowRight size={22} /></button>

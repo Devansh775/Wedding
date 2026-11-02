@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Download, ImageOff } from 'lucide-react';
 
 function safeFilename(photo) {
+  if (photo.filename) return photo.filename;
   const extension = photo.src.split('.').pop()?.split('?')[0] || 'jpg';
   const title = photo.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'wedding-photo';
   return `${title}.${extension}`;
