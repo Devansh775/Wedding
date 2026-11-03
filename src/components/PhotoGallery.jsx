@@ -54,7 +54,7 @@ export default function PhotoGallery() {
             <div className="empty-art"><ImagePlus size={27} strokeWidth={1.25} /></div>
             <p className="eyebrow">The album is waiting</p>
             <h2>{category === 'All Photos' ? 'Your moments will live here.' : `No ${category} photos yet.`}</h2>
-            <p>Add images to the <code>Me/</code> folder to include them in the gallery.</p>
+            <p>Add images to the <code>Me/</code> or <code>Me_2/</code> folder. Use Haldi or Mehendi in a folder or filename to categorize photos.</p>
           </div>
         )}
       </section>

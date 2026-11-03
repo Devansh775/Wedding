@@ -1,7 +1,13 @@
 import { events } from '../data/wedding.js';
+import { photos } from '../data/photos.js';
 import EventCard from './EventCard.jsx';
 
 export default function WeddingEvents() {
+  const eventPhotos = {
+    haldi: photos.find((photo) => photo.category === 'Haldi'),
+    mehendi: photos.find((photo) => photo.category === 'Mehendi'),
+  };
+
   return (
     <section className="events-section section-shell" id="events">
       <div className="section-heading">
@@ -10,7 +16,7 @@ export default function WeddingEvents() {
         <div className="heading-ornament" aria-hidden="true"><span />✦<span /></div>
       </div>
       <div className="events-grid">
-        {events.map((event) => <EventCard key={event.id} event={event} />)}
+        {events.map((event) => <EventCard key={event.id} event={event} photo={eventPhotos[event.id]} />)}
       </div>
     </section>
   );

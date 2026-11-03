@@ -2,16 +2,22 @@ import { CalendarDays, Clock3, MapPin, Flower2, Sparkles, Music2, Flame, Wine, A
 
 const icons = { flower: Flower2, sparkles: Sparkles, music: Music2, flame: Flame, glass: Wine };
 
-export default function EventCard({ event }) {
+export default function EventCard({ event, photo }) {
   const Icon = icons[event.icon];
   const hasLocation = event.mapsUrl && event.address !== 'Add full venue address';
 
   return (
     <article className={`event-card event-${event.id}`}>
-      <div className="event-art">
-        <div className="art-medallion"><Icon size={36} strokeWidth={1.15} /></div>
-        <span className="art-orbit orbit-a" /><span className="art-orbit orbit-b" />
-        <span className="art-corner art-corner-a" /><span className="art-corner art-corner-b" />
+      <div className={`event-art ${photo ? 'has-photo' : ''}`}>
+        {photo ? (
+          <img className="event-photo" src={photo.src} alt={`${event.name} celebration`} />
+        ) : (
+          <>
+            <div className="art-medallion"><Icon size={36} strokeWidth={1.15} /></div>
+            <span className="art-orbit orbit-a" /><span className="art-orbit orbit-b" />
+            <span className="art-corner art-corner-a" /><span className="art-corner art-corner-b" />
+          </>
+        )}
         <p>{event.description}</p>
       </div>
       <div className="event-content">

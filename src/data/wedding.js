@@ -1,8 +1,14 @@
+const locationDetails = {
+  venue: 'Ranip',
+  address: 'Ahmedabad, Gujarat, India',
+  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Ranip%2C%20Ahmedabad%2C%20Gujarat%2C%20India',
+};
+
 export const wedding = {
   bride: 'Ronak',
   groom: 'Ami',
-  initials: 'R & K',
-  date: '26/11/2026',
+  initials: 'R & A',
+  date: 'November 26, 2026',
   dateShort: 'A day to remember',
   familyMessage: 'With the blessings of our families, we invite you to celebrate a new beginning.',
   story: 'Somewhere between shared laughter and quiet promises, our paths became one. We are grateful to the family and friends who have made every chapter brighter, and we cannot wait to begin this next one surrounded by you.',
@@ -12,7 +18,7 @@ export const events = [
   {
     id: 'haldi',
     name: 'Haldi',
-    date: 'Add date',
+    date: '26/11/2026',
     time: 'Add starting time',
     venue: 'Add venue name',
     address: 'Add full venue address',
@@ -23,7 +29,7 @@ export const events = [
   {
     id: 'mehendi',
     name: 'Mehendi',
-    date: 'Add date',
+    date: '26/11/2026',
     time: 'Add starting time',
     venue: 'Add venue name',
     address: 'Add full venue address',
@@ -34,7 +40,7 @@ export const events = [
   {
     id: 'sangeet',
     name: 'Sangeet',
-    date: 'Add date',
+    date: '26/11/2026',
     time: 'Add starting time',
     venue: 'Add venue name',
     address: 'Add full venue address',
@@ -45,18 +51,16 @@ export const events = [
   {
     id: 'wedding',
     name: 'Wedding',
-    date: 'Add date',
+    date: wedding.date,
     time: 'Add starting time',
-    venue: 'Add venue name',
-    address: 'Add full venue address',
-    mapsUrl: '',
+    ...locationDetails,
     description: 'Two families, one promise, a lifetime ahead.',
     icon: 'flame',
   },
   {
     id: 'reception',
     name: 'Reception',
-    date: 'Add date',
+    date: '26/11/2026',
     time: 'Add starting time',
     venue: 'Add venue name',
     address: 'Add full venue address',
